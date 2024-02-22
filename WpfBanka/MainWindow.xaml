@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfBanka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBanka"
+        mc:Ignorable="d"
+        Title="Banka" Height="350" Width="700">
+    <Grid>
+        <DataGrid x:Name="dataGridCentralni" HorizontalAlignment="Center" Height="auto" VerticalAlignment="Center" Width="auto" IsReadOnly="True"
+                  AlternatingRowBackground="CadetBlue" CanUserAddRows="False" SelectionMode="Single" SelectionUnit="FullRow"/>
+        <StackPanel HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="auto" Orientation="Horizontal" >
+            <Button x:Name="btnKlijenti" Content="Klijenti" Height="30" Width="75" Click="btnKlijenti_Click"/>
+            <Button x:Name="btnKorisnici" Content="Korisnici" Height="30" Width="75" Click="btnKorisnici_Click"/>
+            <Button x:Name="btnKartice" Content="Kartice" Height="30" Width="75" Click="btnKartice_Click"/>
+            <Button x:Name="btnKrediti" Content="Krediti" Height="30" Width="75" Click="btnKrediti_Click"/>
+            <Button x:Name="btnRacuni" Content="Računi" Height="30" Width="75" Click="btnRacuni_Click"/>
+            <Button x:Name="btnRateKredita" Content="Rate kredita" Height="30" Width="75" Click="btnRateKredita_Click"/>
+            <Button x:Name="btnTipoviKartica" Content="Tipovi kartica" Height="30" Width="75" Click="btnTipoviKartica_Click"/>
+            <Button x:Name="btnTipoviRacuna" Content="Tipovi računa" Height="30" Width="75" Click="btnTipoviRacuna_Click"/>
+            <Button x:Name="btnTransakcije" Content="Transakcije" Height="30" Width="75" VerticalAlignment="Top" Click="btnTransakcije_Click"/>
+           
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Height="30" VerticalAlignment="Bottom" Width="auto" Orientation="Horizontal">
+            <Button x:Name="btnDodaj" Content="Dodaj" Height="30" Width="75" Click="btnDodaj_Click"/>
+            <Button x:Name="btnIzmijeni" Content="Izmijeni" Height="30" Width="75" Click="btnIzmijeni_Click"/>
+            <Button x:Name="btnObrisi" Content="Obrisi" Height="30" Width="75" Click="btnObrisi_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
