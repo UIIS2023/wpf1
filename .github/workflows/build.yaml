@@ -44,6 +44,7 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"UIIS2023_wpf1" /o:"uiis2023" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet publish WpfBanka.sln -c Debug -o out
-          dotnet build
+          dotnet restore WpfBanka.sln
+          dotnet clean WpfBanka.sln -c Release
+          dotnet build WpfBanka.sln -c Release --no-restore
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
